@@ -1,6 +1,6 @@
 import { Card, Button, Badge } from 'react-bootstrap';
 import { useState } from 'react';
-import EditWorkout from './EditWorkout'; // You'll need to create this component
+import EditWorkout from './EditWorkout'; 
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
 export default function WorkoutCard({ workoutProp, fetchData }) {
