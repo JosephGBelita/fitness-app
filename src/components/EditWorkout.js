@@ -23,7 +23,7 @@ export default function EditWorkout({ workout, show, onHide, fetchData }) {
     const token = localStorage.getItem('token');
     
     try {
-      const response = await fetch(`http://localhost:4000/workouts/updateWorkout/${workout._id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/workouts/updateWorkout/${workout._id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

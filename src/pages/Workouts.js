@@ -16,7 +16,7 @@ export default function Workouts() {
     
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:4000/workouts/getMyWorkouts', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/workouts/getMyWorkouts`, {
         headers: {
           Authorization: `Bearer ${token}`
         }

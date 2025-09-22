@@ -14,7 +14,7 @@ export default function AddWorkouts({ fetchData }) {
     const token = localStorage.getItem('token');
     
     try {
-      const response = await fetch('http://localhost:4000/workouts/addWorkout', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/workouts/addWorkout`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -83,7 +83,7 @@ export default function WorkoutCard({ workoutProp, fetchData }) {
                 onClick={async () => {
                   const token = localStorage.getItem('token');
                   try {
-                    const response = await fetch(`http://localhost:4000/workouts/completeWorkoutStatus/${_id}`, {
+                    const response = await fetch(`${process.env.REACT_APP_API_URL}/workouts/completeWorkoutStatus/${_id}`, {
                       method: 'POST',
                       headers: {
                         Authorization: `Bearer ${token}`
