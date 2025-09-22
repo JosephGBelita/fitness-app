@@ -15,7 +15,7 @@ export default function WorkoutCard({ workoutProp, fetchData }) {
     const token = localStorage.getItem('token');
     
     try {
-      const response = await fetch(`http://localhost:4000/workouts/deleteWorkout/${_id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/workouts/deleteWorkout/${_id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`
